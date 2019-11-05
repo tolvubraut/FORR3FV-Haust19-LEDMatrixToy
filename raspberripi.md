@@ -1,6 +1,6 @@
 ### Raspberry pi information
 
-Username: pi
-Password: pipass
-Hostname: raspberrypi
+* Username: pi
+* Password: pipass
+* Hostname: raspberrypi
 
