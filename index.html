@@ -1,9 +1,128 @@
 <!DOCTYPE html>
-<html>
-<meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
 <body>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/TQSIZOO8FLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <img src="./img/img1.jpg" height="360" width="500">
-    <img src="./img/img1.jpg" height="360" width="500">
+    <div class="container">
+        <div class="header">
+            <h1>Lokaverkefni Viðmótsforritun</h1>
+            <table>
+                <tr><th>Höfundar</th></tr>
+                <tr><td>Daníel Þór Þórisson</td></tr>
+                <tr><td>Sigmar Ólason</td></tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Skóli</th>
+                    <th>Önn</th>
+                    <th>Kennari</th>
+                </tr>
+                <tr>
+                    <td>Tækniskólinn</td>
+                    <td>FORR3FV05EU</td>
+                    <td>Gunnar Þórunnarson</td>
+                </tr>
+                <tr>
+                    <td>Tölvubraut</td>
+                    <td>Viðmótsforritun</td>
+                </tr>
+            </table>
+        </div>
+        <hr />
+        <article class="main">
+            <h2>Verkefni 3</h2>
+            <p>This project was different to what either of us are used to. It was refreshing to work on something more physical than simply code on a screen but challenging at the same time.</p> 
+            <p>There were 4 main stages of working on the project:</p>
+            <ul>
+                <li>Reading instructions and prepping</li>
+                <li>Soldering the connections together</li>
+                <li>Getting linux up and running</li>
+                <li>Communicating with the hardware</li>
+            </ul>
+
+            <h3>Instructions and prep</h3>
+            <p>
+                We spent the first two weeks almost solely reading the instructions and getting to know different concepts mostly related to circuitry, soldering and code that communicates with hardware.
+            </p>
+            <p>
+                There was a lot to learn. We started learning and practicing soldering and we needed to carefully read up on what to do and what not to do. <br />
+                The whole concept of building this was very foreign to us and it took a while to wrap our heads around this whole thing.
+            </p>
+            <h3>Soldering</h3>
+            <p>
+                We started practicing soldering by soldering naked wires together. There was some trial and error with the students as well as the teacher. There was some confusion about what sort of wires to use and what would be optimal to achieve the best results. It was a learning experience for everyone involved.<br />
+                It took a while to properly get some practice in because the soldering supplies were limited to only two soldering stations so everyone had to wait their turn and try to use dead time to learn.
+            </p>
+            <p>
+                Once we had both gotten some practice in soldering and were ready to tackle the real thing there was still some minor issues with wire thickness and limited space at the soldering stations.
+                <br />
+                However when it started going it went fairly well. Some minor issues here and there, the circuit board got a little burned and we had to redo some soldering but it all worked out fine in the end.
+            </p>
+            <h3>Getting linux up and running</h3>
+            <p>
+                This was one of the bigger issues that plagued us. We were trying to get linux with ssh set up on a Raspberry Pi Zero. It was difficult to find good instructions on how to achieve that, even though we tried advice from multiple different sources. <br />
+                The main issue was that we didn't fully understand how to communicate with the linux system after we had installed a Raspbian OS on it.
+                Somehow we managed to get it up by configuring Raspbian's startup configurations to boot with networking, ssh and would be able to accept incoming connections.
+            </p>
+            <h3>Communication with hardware</h3>
+            <p>
+                This was not a big issue and didn't take much time but there was a lot of material to go through. We were using an installer script from Adafruit and a library from Adafruit which. The library was extremely difficult to learn from because of the amount of files containing code and the amount of references and pointers being passed around from file to file.<br />
+                This will come into play futher down in "Verkefni 5".
+            </p>
+            <p>
+                These issues weren't a big deal at this point since we mostly needed to make sure the files were in the right places and that we called the right python file to start up the program.
+            </p>
+            <hr />
+            <h2>Demonstration</h3>
+            <p>
+                Here's a little demo to break up the pace before we go on to Verkefni 5.<br />
+                The video is mostly self explanatory, after turning on the power switch it boots up into the "pixeldust" program. It responds to pitch, tilt and yaw and tries to emulate sand flowing according to those inputs. The button on the left switches the running program and the button on the right resets the current program.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TQSIZOO8FLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>
+                The back of the device is pretty bulky. There isn't really a viable way for us to reduce the size of that thing without making very time consuming modifications.
+            </p>
+            <img src="./img/img1.jpg" height="360" width="500">
+            <p>
+                You can see some of the connections that have been soldered on the varies circuit boards and mounted into the handles.
+            </p>
+            <img src="./img/img2.jpg" height="360" width="500">
+
+            <hr style="width: 100%;" />
+
+            <h2>Verkefni 5</h2>
+            <p>
+                When we finally got the initial project up and running we only had about 2 weeks left of the semester. Here we come back to the adafruit library and the difficulty of trying to learn from it. <br />
+                We started by trying to find resources online but that got us nowhere. The only resource we could find was the Adafruit library itself. There weren't even any documentations on the Adafruit website about this library that we could find.
+            </p>
+            <p>
+                The next thing to do was to try to sort of take the code in the library and copy it, modify it and make it work for us. There were many different things going on that we wanted to get control of; how to draw on the screen and how to access the hardware components to read from. <br />
+                This proved to me more difficult than we initially thought and we made steady but very slow progress.
+            </p>
+            <p>
+                In the end we never managed to get anything functional working. We managed to draw some pixels and read from the accelerometer but nothing useful had come out of it yet.
+            </p>
+
+            <hr />
+
+            <h2>Conclusion</h2>
+            <p>
+                All in all it was a fun project to work on. It was new and it was different to anything we had done before. <br/>
+                Our communcation wasn't the best but we managed to work together fine without any complications. <br />
+                It was disappointing to have to let it go before being able to really implement anything of our own to show for it but we learned a lot from it and we got it to work.
+            </p>
+            <h3>Future plan</h3>
+            <p>
+                We wanted to make a sort of dice roller within the system. We hadn't yet decided on the graphical aspect, whether we should try to draw a dice or simply some abstract representation of a dice with a number on it. <br />
+                The buttons would serve to change the type of dice being used and maybe even add more dice to throw simultaniously.<br/>
+                There could be a small section of the screen dedicated to showing what sort of dice is being used and what the sum would be in case of multiple dice. <br />
+                We were also excited to find an application for shaking the device to switch dice or to "throw" the dice.
+            </p>
+        </article>
+    </div>
+    
 </body>
 </html>
